@@ -49,5 +49,7 @@ Route::get('/user/{nanta}', function ($name) {
          'create', 'store', 'update', 'destroy'
      ]);
      
+     Route::get('/greeting', [WelcomeController::class, 'greeting']);
+   
       
       

@@ -4,15 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PageController extends Controller
+class WelcomeController extends Controller
 {
-    public function index() {
-        return 'Selamat Datang';
-}
-public function about() {
-    return '244107020127|Aryaputra Ferdiananta';
-}
-public function articles() {
-    return 'Halaman Artikel dengan';
+    public function hello(){
+        return('Hello World');
+    }
+public function greeting(){
+        return view('blog.hello')
+            ->with('name','Nanta')
+            ->with('occupation','Astronaut');
 }
 }
